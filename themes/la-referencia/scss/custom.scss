@@ -64,5 +64,10 @@ footer .container {
 }
 
 form input[type=checkbox], form input[type=radio] {
-  margin-right: 4rem;
+  margin-right: 4px;
+}
+
+.form-element{
+  display: flex;
+  column-gap: 4px;;
 }
