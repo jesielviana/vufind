@@ -1,6 +1,6 @@
 <?php
 
-class ExecuteBulkExport
+class ExecuteBulkExportBackground
 {
     protected $email;
     protected $serviceUrl;
@@ -41,7 +41,7 @@ class ExecuteBulkExport
         $options = [
             'http' => [
                 'header' =>
-                    "Content-type: application/x-www-form-urlencoded\r\n",
+                "Content-type: application/x-www-form-urlencoded\r\n",
                 'method' => 'POST',
                 'content' => http_build_query($params),
             ],
@@ -56,7 +56,5 @@ class ExecuteBulkExport
     }
 }
 
-$obj = new ExecuteBulkExport($argv[1]);
+$obj = new ExecuteBulkExportBackground($argv[1]);
 $obj->execute();
-
-?>
